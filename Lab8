@@ -1,0 +1,80 @@
+using System;
+
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                // Задание 1
+
+                Console.WriteLine("Эта программа для того, чтобы узнать размер файла в килобайтах из байтов. Введите кол-во размер файла в байтах.");
+
+                int a,y;
+                a = Convert.ToInt32(Console.ReadLine());
+                y = a / 1024;
+                Console.WriteLine($"{a} байт - это {y} килобайт, соответственно после перевода файл весит {y} килобайт");
+
+            }
+            {
+                // Задание 2
+                Console.WriteLine();
+                int a, b, c;
+
+                Console.WriteLine("Программа для нахождения максимального возможного кол-ва отрезков длины B на отрезке A");
+                Console.WriteLine("Введите длину A");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Введите длину B");
+                b = Convert.ToInt32(Console.ReadLine());
+                c = a / b;
+                Console.WriteLine($"Максимальное кол-во отрезков B на A = {c}");
+            }
+            {
+                // Задание 3
+                Console.WriteLine();
+
+                int a, b, c;
+                Console.WriteLine("Программа для нахождения незанятой части пространства A отрезками B");
+                Console.WriteLine("Введите длину B");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Введите длину B");
+                b = Convert.ToInt32(Console.ReadLine());
+                c = a % b;
+                Console.WriteLine($"Незанятое пространство А = {c}");
+            }
+            {
+                // Задание 4
+                Console.WriteLine();
+
+                Console.WriteLine("Программа для перестановки местами двухзначного числа");
+
+                Console.WriteLine("Введите число для перестановки");
+                string d;
+                char k, b;
+                d = Console.ReadLine();
+                k = d[1];
+                b = d[0];
+                d = Convert.ToString($"Число после перестановки = {k}{b}");
+
+                Console.WriteLine(d);
+
+            }
+            {
+                // Задание 5
+                Console.WriteLine();
+
+                Console.WriteLine("Программа для трёхзначных чисел, в которой зачёркивается первая слева цифра и приписывается справа");
+                string d, g;
+                char k, b,l;
+                d = Console.ReadLine();
+                k = d[0];
+                b = d[1];
+                l = d[2];
+                d = Convert.ToString($"{b}{l}{k}");
+                Console.WriteLine($"Результат = {d}");
+            }
+        }
+    }
+}
