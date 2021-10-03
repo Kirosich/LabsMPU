@@ -1,0 +1,94 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                //Задание 1
+                Console.WriteLine("Программа для нахождения количества секунд, прошедших с начала последней минуты");
+                Console.WriteLine("Введите количество секунд N прошедших с начала суток");
+                int N;
+                N = Convert.ToInt32(Console.ReadLine());
+                N = N % 60;
+                Console.WriteLine($"{N} секунд прошло с начала последней минуты");
+            }
+            {
+                //Задание 2
+                Console.WriteLine("");
+                Console.WriteLine("Программа для определения номера дня недели для K-го дня года, если известно, что в этом году 1 января было понедельником");
+                int k;
+                Console.WriteLine("Введите K");
+                k = Convert.ToInt32(Console.ReadLine());
+                k = k % 7;
+                Console.WriteLine($"{k} - номер дня недели");
+            }
+            {
+                //Задание 3
+                Console.WriteLine();
+                Console.WriteLine("Программа для нахождения номера дня недели K-го дня года, если известно, что в этом году 1 января было днем недели с номером N");
+                int k, n,ned;
+                Console.WriteLine("Введите N");
+                n = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Введите K");
+                k = Convert.ToInt32(Console.ReadLine());
+                ned = k % 7;
+                ned = ned + n;
+                if(ned == 8)
+                {
+                    ned = 7;
+                }
+                Console.WriteLine($"{ned} - номер дня недели");
+
+            }
+            {
+                //Задание 4
+                Console.WriteLine();
+                int A, B, C, count, nz, sqr, sqr1,a1,b1;
+
+                Console.WriteLine("Программа для вычисления кол-ва квадратов и незанятого места ими в прямоугольнике");
+
+                Console.WriteLine("Введите сторону прямоугольника A");
+                A = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Введите сторону прямоугольника B");
+                B = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Введите сторону квадрата C");
+                C = Convert.ToInt32(Console.ReadLine());
+                a1 = A / C;
+                b1 = B / C;
+                if (C < A && C < B)
+                {
+                    if (a1 > b1)
+                    {
+                        count = a1;
+                    }
+                    else
+                    {
+                        count = b1;
+                    }
+                }
+                else
+                {
+                    count = 0;
+                }
+                nz = (A * B) - (count * (C * C));
+                Console.WriteLine($"Кол-во квадратов: {count}, Площадь незанятого места: {nz}");
+
+            }
+            {
+                // Задание 5
+                Console.WriteLine();
+                Console.WriteLine("Программа для вычисления столетия");
+                Console.WriteLine("Введите номер года");
+                int n;
+                n = Convert.ToInt32(Console.ReadLine());
+                n = n / 100;
+                n += 1;
+                Console.WriteLine($"{n} столетие");
+            }
+
+        }
+    }
+}
