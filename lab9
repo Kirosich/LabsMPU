@@ -84,8 +84,13 @@ namespace ConsoleApp1
                 Console.WriteLine("Введите номер года");
                 int n;
                 n = Convert.ToInt32(Console.ReadLine());
-                n = n / 100;
+                if(n%100 == 0){
+                    n=n/100;
+                }
+                else{
+                n = n/100;
                 n += 1;
+                }
                 Console.WriteLine($"{n} столетие");
             }
 
