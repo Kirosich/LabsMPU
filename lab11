@@ -1,0 +1,190 @@
+using System;
+
+namespace Program
+{
+    public class Program
+    {
+        
+        public static void Main(string[] args)
+        {
+            int val;
+
+            Console.WriteLine("Введите нужный номер задания");
+            val = Convert.ToInt32(Console.ReadLine());
+            
+            switch (val)
+            {
+                case 1:
+                    {
+                        // Пример 1
+                        Console.WriteLine("Программа для того чтобы одинаковые числа A и B обнулялись, если равны, или A и B становились одним максимальным из них числом.");
+                        int A, B;
+
+                        Console.WriteLine("Введите A");
+                        A = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите B");
+                        B = Convert.ToInt32(Console.ReadLine());
+
+                        if (A != B)
+                        {
+                            A = Math.Max(A, B);
+                            B = A;
+                        }
+                        else
+                        {
+                            A = 0;
+                            B = 0;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        // Пример 2
+                        Console.WriteLine("Программа для нахождения максимальной суммы из двух чисел в данных трёх");
+                        int a, b, c, sum;
+                        Console.WriteLine("Введите число A");
+                        a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите число B");
+                        b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите число C");
+                        c = Convert.ToInt32(Console.ReadLine());
+                        sum = Math.Max(a, b);
+                        sum = sum + Math.Max(c, sum);
+                        Console.WriteLine($"Максимальная сумма = {sum}");
+                        break;
+                    }
+                case 3:
+                    {
+                        // Пример 3
+                        int a, b, c, rz;
+
+                        Console.WriteLine("Введите A");
+                        a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите B");
+                        b= Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите C");
+                        c = Convert.ToInt32(Console.ReadLine());
+
+                        rz = Math.Abs(a - b);
+                        if (rz < Math.Abs(a - c))
+                        {
+                            Console.WriteLine($"Самая близкая точка к A это B - {rz}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Самая близкая точка к A это C - {a - c}");
+                        }
+                        break;
+                    }
+                case 4:
+                    {
+                        // Пример 4
+                        int x, y;
+
+                        Console.WriteLine("Программа для вычисления четверти точки, не лежащей на осях Х и У");
+                        Console.WriteLine("Введите X координату точки");
+                        x = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите Y координату точки");
+                        y = Convert.ToInt32(Console.ReadLine());
+
+                        if(y > 0 && x > 0)
+                        {
+                            Console.WriteLine("Точка находится в 1-й четверти");
+                        }
+                        
+                        else if (y > 0 && x < 0)
+                        {
+                            Console.WriteLine("Точка находится во 2-й четверти");
+                        }
+
+                        else if (y < 0 && x < 0)
+                        {
+                            Console.WriteLine("Точка находится в 3-й четверти");
+                        }
+                        
+                        else if (y < 0 && x > 0)
+                        {
+                            Console.WriteLine("Точка находится в 4-й четверти");
+                        }
+                        break;
+                    }
+                case 5:
+                    {
+                        // Пример 5
+                        Console.WriteLine("Программа для того, чтобы узнать описание введенного целого числа");
+                        int x;
+                        string info;
+                        info = "";
+                        Console.WriteLine("Введите число");
+                        
+                        x = Convert.ToInt32(Console.ReadLine());
+
+                        if (x > 0)
+                        {
+                            info += "Положительное, ";
+                        }
+                        else if(x<0)
+                        {
+                            info += "Отрицательное, ";
+                        }
+
+                        else if(x==0)
+                        {
+                            info += "Нулевое, ";
+                        }
+
+                        if (x % 2 == 0)
+                        {
+                            info += "четное.";
+                        }
+
+                        else
+                        {
+                            info += "нечётное.";
+                        }
+
+                        Console.WriteLine($"Это число: {info}");
+
+                        break;
+                    }
+                case 6:
+                    {
+                        // Пример 6
+                        Console.WriteLine("Программа для описания числа в диапазоне от 1-999");
+                        int x;
+                        string info, y;
+                        info = "";
+                        Console.WriteLine("Введите число");
+                        y = Console.ReadLine();
+                        x = Convert.ToInt32(y);
+
+                        if (x % 2 == 0)
+                        {
+                            info += "Четное, ";
+                        }
+
+                        else
+                        {
+                            info += "Нечётное, ";
+                        }
+
+                        if (y.Length == 1)
+                        {
+                            info += "однозначное число.";
+                        }
+
+                        if (y.Length == 2)
+                        {
+                            info += "двузначное число.";
+                        }
+
+                        if (y.Length == 3)
+                        {
+                            info += "трёхзначное число.";
+                        }
+                        break;
+                    }
+            }
+        }
+    }
+}
