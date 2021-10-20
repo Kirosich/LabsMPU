@@ -1,0 +1,677 @@
+using System;
+
+namespace Program
+{
+    public class Program
+    {
+        
+        public static void Main(string[] args)
+        {
+            int val;
+
+            Console.WriteLine("Введите нужный номер задания");
+            val = Convert.ToInt32(Console.ReadLine());
+            switch (val)
+            {
+                case 1:
+                    {
+                        // Пример 1
+                        int day, month;
+                        string daystr, monthstr;
+                        Console.WriteLine("Это программа для перевода числовой даты в текстовую");
+                        Console.WriteLine("Введите день");
+                        day = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите месяц");
+                        month = Convert.ToInt32(Console.ReadLine());
+                        daystr = "";
+                        monthstr = "";
+                        switch (day)
+                        {
+                            case 1:
+                                daystr = "первое";
+                                break;
+                            case 2:
+                                daystr = "второе";
+                                break;
+                            case 3:
+                                daystr = "третье";
+                                break;
+                            case 4:
+                                daystr = "четвёртое";
+                                break;
+                            case 5:
+                                daystr = "пятое";
+                                break;
+                            case 6:
+                                daystr = "шестое";
+                                break;
+                            case 7:
+                                daystr = "седьмое";
+                                break;
+                            case 8:
+                                daystr = "восьмое";
+                                break;
+                            case 9:
+                                daystr = "девятое";
+                                break;
+                            case 10:
+                                daystr = "десятое";
+                                break;
+                            case 11:
+                                daystr = "одинадцатое";
+                                break;
+                            case 12:
+                                daystr = "двенадцатое";
+                                break;
+                            case 13:
+                                daystr = "тринадцатое";
+                                break;
+                            case 14:
+                                daystr = "четырнадцатое";
+                                break;
+                            case 15:
+                                daystr = "пятнадцатое";
+                                break;
+                            case 16:
+                                daystr = "шестнадцатое";
+                                break;
+                            case 17:
+                                daystr = "семнадцатое";
+                                break;
+                            case 18:
+                                daystr = "восемнадцатое";
+                                break;
+                            case 19:
+                                daystr = "девятнадцатое";
+                                break;
+                            case 20:
+                                daystr = "двадцатое";
+                                break;
+                            case 21:
+                                daystr = "двадцать первое";
+                                break;
+                            case 22:
+                                daystr = "двадцать первое";
+                                break;
+                            case 23:
+                                daystr = "двадцать первое";
+                                break;
+                            case 24:
+                                daystr = "двадцать первое";
+                                break;
+                            case 25:
+                                daystr = "двадцать первое";
+                                break;
+                            case 26:
+                                daystr = "двадцать первое";
+                                break;
+                            case 27:
+                                daystr = "двадцать седьмое";
+                                break;
+                            case 28:
+                                daystr = "двадцать восьмое";
+                                break;
+                            case 29:
+                                daystr = "двадцать девятое";
+                                break;
+                            case 30:
+                                daystr = "тридцатое";
+                                break;
+                            case 31:
+                                daystr = "тридцать первое";
+                                break;
+                        }
+                        switch (month)
+                        {
+                            case 1:
+                                monthstr = "Января";
+                                break;
+                            case 2:
+                                monthstr = "Февраля";
+                                break;
+                            case 3:
+                                monthstr = "Марта";
+                                break;
+                            case 4:
+                                monthstr = "Апреля";
+                                break;
+                            case 5:
+                                monthstr = "Мая";
+                                break;
+                            case 6:
+                                monthstr = "Июня";
+                                break;
+                            case 7:
+                                monthstr = "Июля";
+                                break;
+                            case 8:
+                                monthstr = "Августа";
+                                break;
+                            case 9:
+                                monthstr = "Сентября";
+                                break;
+                            case 10:
+                                monthstr = "Октября";
+                                break;
+                            case 11:
+                                monthstr = "Ноября";
+                                break;
+                            case 12:
+                                monthstr = "Декабря";
+                                break;
+                        }
+                        Console.WriteLine($"{daystr} {monthstr}");
+                        break;
+                    }
+                case 2:
+                    {
+                        // Пример 2
+
+                        int N;
+                        string dir;
+
+                        Console.WriteLine("Это программа для вычисления траектории робота");
+                        Console.WriteLine("Робот начинает с севера, юга, запада или востока?");
+                        Console.WriteLine("Введите буквой: С, Ю, З или В");
+                        
+                        dir = Console.ReadLine();
+                        
+                        Console.WriteLine("0. Продолжать движение");
+                        Console.WriteLine("1. Повернуть налево");
+                        Console.WriteLine("-1. Повернуть направо");
+
+                        N = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Введите N ( число команды )");
+
+                        if (dir == "С")
+                        {
+                            switch (N)
+                            {
+                                case 0:
+                                    break;
+                                case -1:
+                                    dir = "В";
+                                    break;
+                                case 1:
+                                    dir = "З";
+                                    break;
+                            }
+                        }
+                        else if (dir == "Ю")
+                        {
+                            switch (N)
+                            {
+                                case 0:
+                                    break;
+                                case -1:
+                                    dir = "В";
+                                    break;
+                                case 1:
+                                    dir = "З";
+                                    break;
+                            }
+                        }
+                        else if (dir == "З")
+                        {
+                            switch (N)
+                            {
+                                case 0:
+                                    break;
+                                case -1:
+                                    dir = "С";
+                                    break;
+                                case 1:
+                                    dir = "Ю";
+                                    break;
+                            }
+                        }
+                        else if (dir == "В")
+                        {
+                            switch (N)
+                            {
+                                case 0:
+                                    break;
+                                case -1:
+                                    dir = "Ю";
+                                    break;
+                                case 1:
+                                    dir = "С";
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Вы ввели неправильное направление, программа завершена.");
+                        }
+                        Console.WriteLine($"{dir} - Измененное направление робота");
+                        break;
+                    }
+                case 3:
+                    {
+                        // Пример 3
+                        int N;
+                        string ok, word;
+                        word = "";
+                        Console.WriteLine("Программа для определения кол-ва учебных заданий по некоторой теме в текстовом варианте от 10 до 40-ка");
+                        Console.WriteLine("Введите кол-во заданий");
+                        N = Convert.ToInt32(Console.ReadLine());
+                        if (N < 20)
+                        {
+                            ok = "надцать";
+                            switch (N)
+                            {
+                                case 10:
+                                    word = "Десять учебных заданий";
+                                    break;
+                                case 11:
+                                    word = "один";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                                case 12:
+                                    word = "двена";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                                case 13:
+                                    word = "трина";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                                case 14:
+                                    word = "четыр";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                                case 15:
+                                    word = "пят";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                                case 16:
+                                    word = "шест";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                                case 17:
+                                    word = "семна";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                                case 18:
+                                    word = "восем";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                                case 19:
+                                    word = "девят";
+                                    word += ok;
+                                    word += " учебных заданий";
+                                    break;
+                            }
+                        }
+                        else if (N < 30 && N > 19) 
+                        {
+                            ok = "Двадцать";
+                            switch (N)
+                            {
+                                case 20:
+                                    word += ok;
+                                    word = "";
+                                    word += " учебных заданий";
+                                    break;
+                                case 21:
+                                    word += ok;
+                                    word = "одно";
+                                    word += " учебное задание";
+                                    break;
+                                case 22:
+                                    word += ok;
+                                    word = "два";
+                                    word += " учебных задания";
+                                    break;
+                                case 23:
+                                    word += ok;
+                                    word = "три";
+                                    word += " учебных задания";
+                                    break;
+                                case 24:
+                                    word += ok;
+                                    word = "четыре";
+                                    word += " учебных задания";
+                                    break;
+                                case 25:
+                                    word += ok;
+                                    word = "пять";
+                                    word += " учебных заданий";
+                                    break;
+                                case 26:
+                                    word += ok;
+                                    word = "шесть";
+                                    word += " учебных заданий";
+                                    break;
+                                case 27:
+                                    word += ok;
+                                    word = "семь";
+                                    word += " учебных заданий";
+                                    break;
+                                case 28:
+                                    word += ok;
+                                    word = "восемь";
+                                    word += " учебных заданий";
+                                    break;
+                                case 29:
+                                    word += ok;
+                                    word = "девять";
+                                    word += " учебных заданий";
+                                    break;
+
+                            }
+                        }
+                        else if(N <= 40 && N > 29)
+                        {
+                            ok = "Тридцать";
+                            switch (N)
+                            {
+                                case 30:
+                                    word += ok;
+                                    word = "";
+                                    word += " учебных заданий";
+                                    break;
+                                case 31:
+                                    word += ok;
+                                    word = "одно";
+                                    word += " учебное задание";
+                                    break;
+                                case 32:
+                                    word += ok;
+                                    word = "два";
+                                    word += " учебных задания";
+                                    break;
+                                case 33:
+                                    word += ok;
+                                    word = "три";
+                                    word += " учебных задания";
+                                    break;
+                                case 34:
+                                    word += ok;
+                                    word = "четыре";
+                                    word += " учебных задания";
+                                    break;
+                                case 35:
+                                    word += ok;
+                                    word = "пять";
+                                    word += " учебных заданий";
+                                    break;
+                                case 36:
+                                    word += ok;
+                                    word = "шесть";
+                                    word += " учебных заданий";
+                                    break;
+                                case 37:
+                                    word += ok;
+                                    word = "семь";
+                                    word += " учебных заданий";
+                                    break;
+                                case 38:
+                                    word += ok;
+                                    word = "восемь";
+                                    word += " учебных заданий";
+                                    break;
+                                case 39:
+                                    word += ok;
+                                    word = "девять";
+                                    word += " учебных заданий";
+                                    break;
+                                case 40:                                    
+                                    word = "Сорок";
+                                    word += " учебных заданий";
+                                    break;
+                            }
+                            
+                        }
+                        Console.WriteLine(word);
+                        break;
+                    }
+                case 4:
+                    {
+                        // Пример 4
+                        int a;
+                        Console.WriteLine("Программа для перевода чисел в диапазоне от 100 до 999 в текстовое обозначените.");
+                        Console.WriteLine("Введите число");
+                        a = Convert.ToInt32(Console.ReadLine());
+                        switch (a / 100)
+                        {
+                            case 1:
+                                Console.Write("сто ");
+                                break;
+                            case 2:
+                                Console.Write("двести ");
+                                break;
+                            case 3:
+                                Console.Write("триста ");
+                                break;
+                            case 4:
+                                Console.Write("четыреста ");
+                                break;
+                            case 5:
+                                Console.Write("пятьсот ");
+                                break;
+                            case 6:
+                                Console.Write("шестьсот ");
+                                break;
+                            case 7:
+                                Console.Write("семьсот ");
+                                break;
+                            case 8:
+                                Console.Write("восемьсот ");
+                                break;
+                            case 9:
+                                Console.Write("девятьсот ");
+                                break;
+                        }
+
+                        if (a / 10 % 10 == 1)
+                        {
+                            switch (a % 100)
+                            {
+                                case 11:
+                                    Console.Write("одинадцать ");
+                                    break;
+                                case 12:
+                                    Console.Write("двенадцать ");
+                                    break;
+                                case 13:
+                                    Console.Write("тринадцать ");
+                                    break;
+                                case 14:
+                                    Console.Write("четырнадцать ");
+                                    break;
+                                case 15:
+                                    Console.Write("пятнадцать ");
+                                    break;
+                                case 16:
+                                    Console.Write("шестнацать ");
+                                    break;
+                                case 17:
+                                    Console.Write("семнадцать ");
+                                    break;
+                                case 18:
+                                    Console.Write("восемнадцать ");
+                                    break;
+                                case 19:
+                                    Console.Write("девятнадцать ");
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            switch (a / 10 % 10)
+                            {
+                                case 2:
+                                    Console.Write("двадцать ");
+                                    break;
+                                case 3:
+                                    Console.Write("тридцать ");
+                                    break;
+                                case 4:
+                                    Console.Write("сорок ");
+                                    break;
+                                case 5:
+                                    Console.Write("пятьдесят ");
+                                    break;
+                                case 6:
+                                    Console.Write("шестьдесят ");
+                                    break;
+                                case 7:
+                                    Console.Write("семьдесят ");
+                                    break;
+                                case 8:
+                                    Console.Write("восемьдесят ");
+                                    break;
+                                case 9:
+                                    Console.Write("девяносто ");
+                                    break;
+                            }
+
+                            switch (a % 10)
+                            {
+                                case 1:
+                                    Console.Write("один ");
+                                    break;
+                                case 2:
+                                    Console.Write("два ");
+                                    break;
+                                case 3:
+                                    Console.Write("три ");
+                                    break;
+                                case 4:
+                                    Console.Write("четыре ");
+                                    break;
+                                case 5:
+                                    Console.Write("пять ");
+                                    break;
+                                case 6:
+                                    Console.Write("шесть ");
+                                    break;
+                                case 7:
+                                    Console.Write("семь ");
+                                    break;
+                                case 8:
+                                    Console.Write("восемь ");
+                                    break;
+                                case 9:
+                                    Console.Write("девять ");
+                                    break;
+                            }
+                        
+                        }
+                        break;
+                    }
+                case 5:
+                    {
+                        // Пример 5
+                        Console.WriteLine("Это программа для определения названия года по восточному календарю");
+                        int a,b;
+                        string color, animal, colorgo, word;
+                        animal = "";
+                        word = "год";
+                        colorgo = "";
+                        color = "";
+                        a = Convert.ToInt32(Console.ReadLine());
+                        b = (a -3) % 60;
+                        if (b == 0)
+                        {
+                            b = 60;
+                        }
+                        switch (b / 12)
+                        {
+                            case 0:
+                                color = "зеленой";
+                                colorgo = "зеленого";
+                                break;
+                            case 1:
+                                color = "красной";
+                                colorgo = "красного";
+                                break;
+                            case 2:
+                                color = "желтой";
+                                colorgo = "желтого";
+                                break;
+                            case 3:
+                                color = "белой";
+                                colorgo = "белого";
+                                break;
+                            case 4:
+                                color = "белой";
+                                colorgo = "белого";
+                                break;
+                            case 5:
+                                color = "белой";
+                                colorgo = "белого";
+                                break;
+                        }
+                        if(b == 5)
+                        {
+                            b = 0;
+                        }
+                        switch(b % 12)
+                        {
+                            case 1:                                
+                                animal = "крысы";
+                                word += $" {color} {animal}.";
+                                break;
+                            case 2:
+                                animal = "коровы";
+                                word += $" {color} {animal}.";
+                                break;
+                            case 3:
+                                animal = "тигра";
+                                word += $" {colorgo} {animal}.";
+                                break;
+                            case 4:
+                                animal = "зайца";
+                                word += $" {colorgo} {animal}.";
+                                break;
+                            case 5:
+                                animal = "дракона";
+                                word += $" {colorgo} {animal}.";
+                                break;
+                            case 6:
+                                animal = "змеи";
+                                word += $" {color} {animal}.";
+                                break;
+                            case 7:
+                                animal = "лошади";
+                                word += $" {color} {animal}.";
+                                break;
+                            case 8:
+                                animal = "овцы";
+                                word += $" {color} {animal}.";
+                                break;
+                            case 9:
+                                animal = "обезьяны";
+                                word += $" {color} {animal}.";
+                                break;
+                            case 10:
+                                animal = "курицы";
+                                word += $" {color} {animal}.";
+                                break;
+                            case 11:
+                                animal = "собаки";
+                                word += $" {color} {animal}.";
+                                break;
+                            case 0:
+                                animal = "свиньи";
+                                word += $" {color} {animal}.";
+                                break;
+                        }
+                        Console.WriteLine(word);
+                        break;
+                    }
+
+            }
+        }
+    }
+}
