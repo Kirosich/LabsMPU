@@ -1,0 +1,191 @@
+using System;
+
+namespace Program
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int val;
+
+            Console.WriteLine("Введите нужный номер задания");
+            val = Convert.ToInt32(Console.ReadLine());
+            
+            switch (val)
+            {
+                case 1:
+                    {
+                        // пример 1
+                        int A, B;
+                        Console.WriteLine("Это программа для проверки истинности высказывания 'Справедливы ли неравенства A>2 и B<=3'");
+                        Console.WriteLine("Введите A");
+                        A = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите B");
+                        B = Convert.ToInt32(Console.ReadLine());
+
+                        if (A > 2 && B <= 3)
+                        {
+                            Console.WriteLine("Неравенства справедливы");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Неравенства несправедливы");
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        // Пример 2
+                        Console.WriteLine("Программа предназначена для проверки истинности высказывания: «Справедливо двойное неравенство A < B < C »");
+                        
+                        int A, B, C;
+
+                        Console.WriteLine("Введите A");
+                        Console.WriteLine("Введите B");
+                        Console.WriteLine("Введите C");
+
+                        A = Convert.ToInt32(Console.ReadLine());
+                        B = Convert.ToInt32(Console.ReadLine());
+                        C = Convert.ToInt32(Console.ReadLine());
+
+                        if(A < B && B < C)
+                        {
+                            Console.WriteLine("Неравенство справедливо");                        
+                        }
+                        else
+                        {
+                            Console.WriteLine("Неравенство несправедливо");
+                        }
+                        break;
+                    }
+                case 3:
+                    {
+                        //Пример 3
+                        Console.WriteLine("Программа для проверки того, что число двухзначно и четно");
+                        int x;
+
+                        Console.WriteLine("Введите число");
+ 
+                        x = Convert.ToInt32(Console.ReadLine());
+
+                        if(x % 2 == 0 && x > 9 && x < 100)
+                        {
+                            Console.WriteLine("Число действительно двухзначно и четно");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Число не прошло проверку");
+                        }
+
+                        break;
+                    }
+                case 4:
+                    {
+                        // Пример 4
+                        Console.WriteLine("Программа для истинности высказывания трёхзначного числа: «Цифры данного числа образуют возрастающую или убывающую последовательность».");
+                        string x;
+                        char y,z,k;
+                        Console.WriteLine("Введите трёхзначное число");
+                        x = Console.ReadLine();
+                        y = x[1];
+                        z = x[2];
+                        k = x[0];
+
+                        if (z > y && y > k || k > y && k > z)
+                        {
+                            Console.WriteLine("Высказывание истинно");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Высказывание ложно");
+                        }
+                        
+                        break;
+                    }
+                case 5:
+                    {
+                        // Пример 5
+                        Console.WriteLine("Программа для проверки четырёхзначного числа палиндрома");
+                        string x;
+                        char z, y, c, b;
+
+                        Console.WriteLine("Введите четырёхзначное число");
+
+                        x = Console.ReadLine();
+
+                        z = x[0];
+                        y = x[1];
+                        c = x[2];
+                        b = x[3];
+
+                        if(z == b && y == c)
+                        {
+                            Console.WriteLine("Это число-палиндром");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Число не палиндром");
+                        }
+                        break;
+                    }
+                case 6:
+                    {
+                        // Пример 6
+                        Console.WriteLine("Программа для проверки истинности высказывания: «Треугольник со сторонами a, b, c является прямоугольным».");
+                        double a,b,c,c1,c2,c3;
+                        Console.WriteLine("Введите сторону a");
+                        a = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Введите сторону b");
+                        b = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Введите сторону c");
+                        c = Convert.ToDouble(Console.ReadLine());
+                        c1 = Math.Max(a,b);
+                        c3 = Math.Min(a, b);
+                        c1 = Math.Max(c1,c);
+                        c2 = Math.Min(c1, c);
+                        a = c3;
+                        b = c2;
+                        
+
+                        if (Math.Sqrt((a * a) + (b * b)) == c1)
+                        {
+                            Console.WriteLine("Треугольник прямоуголен");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Треугольник не прямоугольный");
+                        }
+                        break;
+                    }
+                case 7:
+                    {
+                        // Пример 7
+                        Console.WriteLine("Программа для проверки существования треугольника");
+                        double a, b, c, c1, c2, c3;
+                        Console.WriteLine("Введите сторону a");
+                        a = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Введите сторону b");
+                        b = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Введите сторону c");
+                        c = Convert.ToDouble(Console.ReadLine());
+                        c1 = Math.Max(a, b);
+                        c3 = Math.Min(a, b);
+                        c1 = Math.Max(c1, c);
+                        c2 = Math.Min(c1, c);
+                        a = c3;
+                        b = c2;
+
+                        if (a + b >= c1)
+                        {
+                            Console.WriteLine("Треугольник не существует");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Треугольник существует");
+                        }
+                        break;
+                    }
+            }
+        }
+    }
+}
