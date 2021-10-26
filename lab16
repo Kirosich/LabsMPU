@@ -1,0 +1,160 @@
+using System;
+
+namespace Program
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Введите номер нужного задания");
+            int val;
+            val = Convert.ToInt32(Console.ReadLine());
+
+            switch (val)
+            {
+                case 1:
+                    {
+                        // Пример 1
+                        int N, number;
+                        
+                        Console.WriteLine("Программа, которая выводит N первых нечётных чисел массива");
+                        N = Convert.ToInt32(Console.ReadLine());
+                        int[] num = new int[N];
+                        number = 1;
+                        for (int i = 0; i < N; i++)
+                        {
+                            num[i] = number;
+                            number += 2;
+                        }
+                        Console.Write($"Массив первых нечётных чисел: ");
+                        for (int j = 0; j < N; j++)
+                        {
+                            Console.Write($"{num[j]} ");
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        // Пример 2
+                        int N;
+                        double A, D;
+                        Console.WriteLine("Программа для вывода N членов геометрической прогрессии, где A - первый член, а D - знаменатель");
+                        Console.WriteLine("Введите N");
+                        N = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите A");
+                        A = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Введите D");
+                        D = Convert.ToDouble(Console.ReadLine());
+                        double[] num = new double[N];
+                        num[0] = A;
+                        for (int i = 1; i<N; i++)
+                        {
+
+                            num[i] = A * Math.Pow(D, i);
+                        }
+                        Console.Write("Массив геометрической прогрессии: ");
+                        for (int j = 0; j < N; j++)
+                        {
+                            Console.Write($"{num[j]} ");
+                        }
+
+                        break;
+                    }
+                case 3:
+                    {
+                        // Пример 3
+                        Console.WriteLine("Программа для вывода массива с N элементами, где первым элементом является А, а вторым B, остальные же суммой всех предыдущих");
+                        int N, A, B;
+                        Console.WriteLine("Введите N");
+                        N = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите A");
+                        A = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Введите B");
+                        B = Convert.ToInt32(Console.ReadLine());
+                        int[] num = new int[N];
+                        num[0] = A;
+                        num[1] = B;
+                        for (int i = 2; i < N; i++)
+                        {
+                            for (int j = 0;j < i; j++)
+                            {
+                                num[i] += num[j];
+                            }
+                        }
+                        Console.Write("Массив:");
+                        for (int j = 0; j < N; j++)
+                        {
+                            Console.Write($"{num[j]} ");
+                        }
+                        break;
+                    }
+                case 4:
+                    {
+                        // Пример 4
+                        Console.WriteLine("Эта программа выводит элементы массива A размера N в определенном порядке ");
+                        int N;
+                        Console.WriteLine("Введите N");
+                        N = Convert.ToInt32(Console.ReadLine());
+                        int[] A = new int[N];
+                        for (int i = 0; i < N; i++)
+                        {
+                            Console.WriteLine($"Введите {i + 1} элемент массива");
+                            A[i] = Convert.ToInt32(Console.ReadLine());
+                        }
+                        Console.Write("Массив в порядке A1, AN, A2, AN-1...:" );
+                        if (N < 2)
+                        {
+                            Console.Write($"{A[0]} {A[N-1]}");
+                        }
+                        else
+                        {
+                            for (int k = 0; k < N; k++)
+                            {
+                                Console.Write($"{A[k]} ");
+                                Console.Write($"{A[N - k - 1]} ");
+                            }
+                        }
+                        break;
+                    }
+                case 5:
+                    {
+                        // Пример 5
+                        Console.WriteLine("Это программа, которая сначала выводит элементы массива A размера N с нечетными номерами с начала, а после же с чётными но с конца");
+                        int N;
+                        Console.WriteLine("Введите N");
+                        N = Convert.ToInt32(Console.ReadLine());
+                        int[] A = new int[N];
+                        for (int i = 0; i < N; i++)
+                        {
+                            Console.WriteLine($"Введите {i + 1} элемент массива");
+                            A[i] = Convert.ToInt32(Console.ReadLine());
+                        }
+
+                        Console.WriteLine("Массив: ");
+
+                        for(int j = 1; j < N; j+=2)
+                        {
+                            Console.Write($"{A[j]} ");
+                        }
+                        if (N % 2 == 0)
+                        {
+                            for (int j = N; j >= 0; j -= 2)
+                            {
+                                Console.Write($"{A[j]} ");
+                            }
+                        }
+                        else
+                        {
+                            for (int j = N-1; j >= 0; j -= 2)
+                            {
+                                Console.Write($"{A[j]} ");
+                            }
+                        }
+                        break;
+                    }       
+            }
+
+            
+        }
+    }
+}
